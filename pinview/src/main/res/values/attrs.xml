@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PinView">
+        <attr name="numberOfFields" format="integer" />
+        <attr name="showKeyboard" format="boolean" />
+        <attr name="pendingInputColor" format="color" />
+        <attr name="idleInputColor" format="color" />
+        <attr name="completedInputColor" format="color" />
+        <attr name="pendingInputSize" format="dimension" />
+        <attr name="completedInputSize" format="dimension" />
+    </declare-styleable>
+</resources>
