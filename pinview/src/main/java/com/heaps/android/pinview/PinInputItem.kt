@@ -3,6 +3,7 @@ package com.heaps.android.pinview
 import android.animation.Animator
 import android.animation.ValueAnimator
 import android.content.Context
+import android.graphics.Canvas
 import android.graphics.Color
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -56,6 +57,7 @@ class PinInputItem : FrameLayout {
 
     fun setCompletedInputColor(completedInputColor: Int) {
         this.completedInputColor = completedInputColor
+        smallCircle.setBackgroundPaintColor(completedInputColor)
         invalidate()
     }
 
@@ -78,11 +80,10 @@ class PinInputItem : FrameLayout {
     private fun init() {
         LayoutInflater.from(context).inflate(R.layout.view_pin_input, this)
         smallCircle = findViewById(R.id.small_circle)
-        smallCircle.setBackgroundPaintColor(completedInputColor)
         bigCircle = findViewById(R.id.big_circle)
-        bigCircle.setBackgroundPaintColor(pendingInputColor)
         container = findViewById(R.id.container)
     }
+
 
     fun setAwaitingInput() {
         bigCircle.setBackgroundPaintColor(pendingInputColor)
