@@ -30,6 +30,7 @@ if (project.hasProperty('publish') && project.getProperty('publish')) {
     libraryVersion = rootProject.ext.libVersionName
 
     developerId = POM_DEVELOPER_ID
+    userOrganization = POM_DEVELOPER_ID
     developerName = POM_DEVELOPER_NAME
     developerEmail = POM_DEVELOPER_EMAILID
 

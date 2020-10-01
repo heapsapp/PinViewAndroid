@@ -29,8 +29,8 @@ task clean(type: Delete) {
 
 ext {
     //Library Info
-    libVersionCode = 2
-    libVersionName = '0.0.2'
+    libVersionCode = 3
+    libVersionName = '0.0.3'
     libPomUrl = 'https://github.com/heapsapp/PinViewAndroid'
     libGithubRepo = 'heapsapp/PinViewAndroid'
     libModuleName = 'pinview'
