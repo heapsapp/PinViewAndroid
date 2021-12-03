@@ -21,6 +21,8 @@ allprojects {
         jcenter()
         
     }
+    group = 'com.heaps.android.ui'
+    version = '0.0.3'
 }
 
 task clean(type: Delete) {
