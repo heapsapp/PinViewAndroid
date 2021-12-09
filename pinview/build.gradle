@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 29
@@ -30,4 +31,16 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
 }
 
-apply from: './scripts/bintrayConfig.gradle'
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                group = 'com.heaps.android.ui'
+                version = '1.0.0'
+                artifactId = 'pinview'
+            }
+        }
+    }
+}
